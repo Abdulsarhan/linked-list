@@ -7,10 +7,6 @@ typedef struct LinkedList{
     struct LinkedList* next;
 }LinkedList;
 
-LinkedList list = {
-	0, NULL
-};
-
 #ifdef LL_STATIC
 #define LLAPI static
 #else
@@ -76,16 +72,3 @@ LLAPI void linked_list_print(LinkedList linkedlist, int listidx) {
     printf("ListNumber: %d, ListData: %d\n", listidx ,linkedlist.data);
 }
 #endif
-
-int main() {
-
-    linked_list_add(&list, 1);
-    linked_list_remove(&list, 1);
-    linked_list_add(&list, 2);
-    linked_list_add(&list, 3);
-    linked_list_print(list, 0);
-    linked_list_print(list, 1);
-    linked_list_print(list, 2);
-    return 0;
-
-}

@@ -21,11 +21,11 @@ LLAPI void linked_list_add(LinkedList* linkedlist, int data);
 LLAPI void linked_list_remove(LinkedList* currentlist, int listidx);
 LLAPI void linked_list_print(LinkedList linkedlist, int listidx);
 
-#ifdef LL_IMPLEMENTATION
-
 #ifdef __cplusplus
 }
 #endif
+
+#ifdef LL_IMPLEMENTATION
 
 LLAPI void linked_list_add(LinkedList* linkedlist, int data) {
     while(linkedlist->next != NULL) {
